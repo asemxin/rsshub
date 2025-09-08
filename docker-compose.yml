@@ -1,10 +1,11 @@
 services:
-    rsshub:
-        # two ways to enable puppeteer:
-        # * comment out marked lines, then use this image instead: diygod/rsshub:chromium-bundled
-        # * (consumes more disk space and memory) leave everything unchanged
-        image: diygod/rsshub:chromium-bundled #or ghcr.io/diygod/rsshub
-        restart: always
+  rsshub:
+    # two ways to enable puppeteer:
+    # * comment out marked lines, then use this image instead: diygod/rsshub:chromium-bundled
+    # * (consumes more disk space and memory) leave everything unchanged
+    image: diygod/rsshub:chromium-bundled # Use this image with built-in browser
+    # image: diygod/rsshub # This image is disabled
+    restart: always
         ports:
             - "1200:1200"
         environment:
